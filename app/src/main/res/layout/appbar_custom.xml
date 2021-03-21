@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.test.testtiket.ui.base.BaseViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/padding_smlarge"
+        android:paddingTop="@dimen/padding_smlarge"
+        android:paddingEnd="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_xmsmall">
+
+        <TextView
+            android:id="@+id/tv_title_appbar"
+            style="@style/TextAppearance.Text.Semi.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:text="@{viewModel.appBarTitle}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xxl" />
+
+    </LinearLayout>
+
+
+</layout>
