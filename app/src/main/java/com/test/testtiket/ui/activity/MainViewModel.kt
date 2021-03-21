@@ -73,7 +73,7 @@ open class MainViewModel(baseUsecase: IUserUsecases, schedulerProvider: Schedule
             userListAdapter.clearLatest()
         }
         userListAdapter.addItems(list)
-        isEmpty.set(userListAdapter.isEmpty())
+        isEmpty.set(userListAdapter.listData.isEmpty())
         runBlocking { }
     }
 
