@@ -67,7 +67,7 @@ open class MainViewModel(baseUsecase: IUserUsecases, schedulerProvider: Schedule
     }
 
     private fun populateData(list: List<User>) {
-        isEmpty.set(list.isEmpty())
+        isEmpty.set(userListAdapter.itemCount == 0)
         if (!isLoadingLoadMore) {
             userListAdapter.clearItems()
         } else {
